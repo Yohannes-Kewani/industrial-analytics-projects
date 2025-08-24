@@ -1,1 +1,4 @@
-data/
+# Ignore data folder
+.data/
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
