@@ -2,6 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Failure Prediction UI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+    <title>Machine Failure Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+   <div class="container"> <div class="title"><h2>Machine Failure Prediction</h2></div>
+    <form class="form">
+        <h2>Type of the machine</h2>
+        <div class="switch-field">
+         <input type="radio" id="radio-L" name="uitype" value="l">
+         <label for="radio-L">Low quality product(L)</label>
+         <input type="radio" id="radio-M" name="uitype" value="m">
+         <label for="radio-M">Medium quality product(M)</label>
+         <input type="radio" id="radio-H" name="uitype" value="h">
+         <label for="radio-H">High quality product(H)</label>
+        </div>
+        <h2>Air Temperature</h2>
+        <input type="text" class="air_T" id="uiAir_T" name="Air_T" value="300">
+         <h2>Process Temperature</h2>
+         <input type="text" class="process_T" id="uiProcess_T" name="process_T" value="300">
+         <h2>Rotational Speed</h2>
+         <input type="text" class="rotational_speed" id="uiRotational_speed" name="rotational_speed" value="1500">
+         <h2>Torque</h2>
+         <input type="text" class="Torque" id="uiTorque" name="Torque" value="45">
+         <h2>Tool Wear</h2>
+         <input type="text" class="Tool_wear" id="uiToolWear" name="Tool_wear" value="20">    
+    </form>
+ <div class="right-panel"> <div>  <button type="button" onclick="onClickPredictFailure()" class="submit">Estimate Machine Failure</button>
+    <div id="uiEstimateFailure" class="result"><h2></h2></div></div></div></div>
+   
+    
+</body>
+</html>
