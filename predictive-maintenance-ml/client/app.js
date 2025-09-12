@@ -17,7 +17,8 @@ function onClickPredictFailure() {
     var tool_wear = document.getElementById("uiToolWear");
     var estPrice = document.getElementById("uiEstimateFailure");
 
-    var url = "http://127.0.0.1:5000/get_failure";
+    // var url = "http://127.0.0.1:5000/get_failure";
+    var url = "/api/get_failure";
     $.post(url, {
         type: type,
         air_T: parseFloat(air_T.value),
