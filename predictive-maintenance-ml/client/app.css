@@ -20,6 +20,11 @@ h2 {
     margin-bottom: 10px;
     color: #00d4ff;
 }
+.title{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
 
 /* Container for the form and right panel */
 .container {
@@ -101,10 +106,17 @@ input[type="text"]::placeholder {
 /* Right panel container */
 .right-panel {
     display: flex;
+    
+    align-items: center;
+    
+    min-height: 100vh;
+
+}
+.right-panel > div{
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 350px;
 }
 
 /* Button styling */
@@ -148,6 +160,23 @@ button.submit:hover {
         align-items: center;
         gap: 20px;
     }
+    .title{
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
+    .right-panel{
+        display: flex;
+        align-items: center;
+        min-height:auto;
+    }
+ .right-panel > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25%;
+    gap: 20px;
+}
     
     form.form,
     .right-panel {
@@ -157,6 +186,6 @@ button.submit:hover {
 
     button.submit,
     .result {
-        width: 100%; /* Make buttons and result box take full width */
+        width: 100%; 
     }
 }
